@@ -1,0 +1,22 @@
+group 'bk_manage'
+version '1.0-SNAPSHOT'
+
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+    apply plugin: 'idea'
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+    [compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
+    repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        mavenCentral()
+    }
+}
+
+subprojects {
+    dependencies {
+        compile group: 'com.alibaba', name: 'fastjson', version: '1.2.41'
+        compile group: 'log4j', name: 'log4j', version: '1.2.17'
+    }
+}

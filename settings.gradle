@@ -1,0 +1,4 @@
+rootProject.name = 'bk_manage'
+include 'bk_service'
+include 'bk_common'
+
