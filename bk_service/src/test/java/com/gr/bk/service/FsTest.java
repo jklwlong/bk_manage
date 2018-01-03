@@ -1,22 +1,19 @@
 package com.gr.bk.service;
 
-import com.gr.bk.common.domain.UserDomain;
-import com.gr.bk.common.utils.StringTools;
-
-import java.lang.reflect.Field;
-import java.util.Date;
-
 public class FsTest {
     public static void main(String[] args) throws Exception {
-        UserDomain user = new UserDomain();
-        user.setPassword("pw");
-        user.setCreateTime(new Date());
-        user.setCreateUserUuid("2222");
-        user.setDelFlag(0);
-        user.setId(1);
-        user.setMobile("222");
-        user.setUsername("name");
-        System.out.println(StringTools.getUuid());
-//        System.out.println(MD5.encode("123654",MD5.LENGTH_32));
+        int[] arr = {5, 9, 6, 3, 8, 1, 7};
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] > arr[j]) {
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+        for(int i=0;i<arr.length;i++){
+            System.out.println(arr[i]);
+        }
     }
 }
