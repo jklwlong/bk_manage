@@ -29,6 +29,11 @@ private static final Logger logger = LoggerFactory.getLogger(UserController.clas
     @Resource
     private UserService userService;
 
+
+    /**
+     * 测试
+     * @return
+     */
     @RequestMapping("/test")
     @RequiresPermissions("add:edit")
     @ResponseBody
@@ -38,12 +43,22 @@ private static final Logger logger = LoggerFactory.getLogger(UserController.clas
         return success(userlist);
     }
 
+    /**
+     * 登录页面
+     * @return
+     */
     @RequestMapping("/login")
     public String login() {
         logger.info("进入登录页面");
         return "/user/login";
     }
 
+    /**
+     * 登录方法
+     * @param username
+     * @param password
+     * @return
+     */
     @RequestMapping("/loginUser")
     @ResponseBody
     public MessageResp loginUser(String username, String password) {
@@ -66,6 +81,10 @@ private static final Logger logger = LoggerFactory.getLogger(UserController.clas
         return success();
     }
 
+    /**
+     * 登出方法
+     * @return
+     */
     @RequestMapping("/logout")
     public String logOut() {
         logger.info("用户登出");

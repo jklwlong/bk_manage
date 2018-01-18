@@ -7,8 +7,8 @@ public class IoTest {
 //        characters();
 //        CopyTextDemo("E:\\1.txt", "E:\\2.txt");
 //        bWriter();
-//        copyMedia();
-        InOutDemo();
+        copyMedia();
+//        InOutDemo();
     }
 
     /**
@@ -104,29 +104,28 @@ public class IoTest {
     }
 
     public static void copyMedia() {
-
-        FileInputStream fis = null;
-        FileOutputStream fos = null;
+        BufferedInputStream bis = null;
+        BufferedOutputStream bos = null;
         try {
-            fis = new FileInputStream("E:\\devil.jpg");
-            fos = new FileOutputStream("E:\\cry.jpg");
+            // buffered高效流，字节缓冲输入，字节缓冲输出
+            bis = new BufferedInputStream(new FileInputStream("E:\\devil.jpg"));
+            bos = new BufferedOutputStream(new FileOutputStream("E:\\cry.jpg"));
             byte[] copy = new byte[1024];
             int len = 0;
-            while ((len = fis.read(copy)) != -1) {
-                fos.write(copy, 0, len);
+            while ((len = bis.read(copy)) != -1) {
+                bos.write(copy, 0, len);
             }
         } catch (IOException e) {
             e.printStackTrace();
             throw new RuntimeException("复制文件异常");
         } finally {
             try {
-                if (fis != null) fis.close();
+                bis.close();
+                bos.close();
             } catch (IOException e) {
                 e.printStackTrace();
-                throw new RuntimeException("读取流");
             }
         }
-
     }
 
     public static void InOutDemo() {

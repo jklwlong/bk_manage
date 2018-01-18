@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExistTest {
+
     public static void main(String[] args) {
         String s = "asdasffdllaffsddfeeoiadf";
         char[] chars = s.toCharArray();

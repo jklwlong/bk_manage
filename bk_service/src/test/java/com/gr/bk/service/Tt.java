@@ -1,18 +1,32 @@
 package com.gr.bk.service;
 
 import com.gr.bk.common.domain.UserDomain;
+import groovy.transform.Synchronized;
+import org.apache.ibatis.cache.decorators.SynchronizedCache;
+import sun.security.krb5.internal.Ticket;
 
-import java.util.Arrays;
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class Tt {
-    public static void main(String[] args) {
 
-        Integer [][] a = {{1},{2},{3},{4}};
-//        List<Integer> b = Arrays.asList(a);
-        System.out.println(a[1][0]);
-//        System.out.println(a.toString());
+    public static void main(String[] args) throws Exception {
+
+    }
+
+    private synchronized static String sub(String a) throws InterruptedException {
+        Thread th = new Thread(() -> {
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("22222222222");
+        });
+        th.start();
+        th.wait();
+        th.notify();
+        th.notifyAll();
+        return "abc";
     }
 }
