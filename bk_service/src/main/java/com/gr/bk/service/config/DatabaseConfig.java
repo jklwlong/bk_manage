@@ -18,7 +18,7 @@ import java.sql.SQLException;
 
 @Component
 @MapperScan(basePackages = "com.gr.bk.service.persistence")
-@PropertySource(value = "classpath:persist.properties", ignoreResourceNotFound = true, encoding = "utf-8")
+//@PropertySource(value = "classpath:persist.properties", ignoreResourceNotFound = true, encoding = "utf-8")
 public class DatabaseConfig {
     private Logger logger = LoggerFactory.getLogger(DatabaseConfig.class);
 

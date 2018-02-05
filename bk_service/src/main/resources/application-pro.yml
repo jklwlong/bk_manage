@@ -1,0 +1,26 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/bootdo?characterEncoding=UTF-8&autoReconnect=true&failOverReadOnly=false&useSSL=true
+    username: root
+    password:
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    filters: stat,wall,log4j
+    logSlowSql: true
+  thymeleaf:
+    cache: false
+    cache-period: 0
+    mode: LEGACYHTML5
+    template:
+      cache: false
