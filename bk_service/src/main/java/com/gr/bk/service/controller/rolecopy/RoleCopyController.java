@@ -1,7 +1,6 @@
 package com.gr.bk.service.controller.rolecopy;
 
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
-import com.baomidou.mybatisplus.mapper.Wrapper;
 import com.baomidou.mybatisplus.plugins.Page;
 import com.gr.bk.common.BaseController;
 import com.gr.bk.common.MessageResp;
@@ -13,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
-import java.util.List;
 
 @RequestMapping("/rolecopy")
 @Controller

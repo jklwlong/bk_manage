@@ -54,6 +54,16 @@ private static final Logger logger = LoggerFactory.getLogger(UserController.clas
     }
 
     /**
+     * 成功页面
+     * @return
+     */
+    @RequestMapping("/success")
+    public String loginSuccess() {
+        logger.info("登录成功页面");
+        return "/user/loginSuccess";
+    }
+
+    /**
      * 登录方法
      * @param username
      * @param password

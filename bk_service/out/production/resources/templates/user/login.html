@@ -1,22 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+    <title>Login</title>
+    <link href="/css/style.css" rel='stylesheet' type='text/css'/>
+    <script src="/js/jquery-3.3.1.min.js"></script>
 </head>
 <body>
-<table>
-	<tr>
+<!--SIGN UP-->
+<h1>klasikal Login Form</h1>
+<div class="login-form">
+    <div class="head-info">
+        <label class="lbl-1"> </label>
+        <label class="lbl-2"> </label>
+        <label class="lbl-3"> </label>
+    </div>
+    <div class="clear"></div>
+    <div class="avtar">
+        <img src="/images/avtar.png"/>
+    </div>
+    <form id="sub">
+        <input type="text" class="text" value="" name="username"/>
+        <div>
+            <input type="password" value="" name="password">
+        </div>
+    </form>
 
-		<td>1</td>
-		<td>2</td>
-	</tr>
-	<tr>
+    <div class="signin">
+        <input type="submit" value="Login" onclick="sub()"/>
+    </div>
+</div>
+<!--<div class="copy-rights">-->
 
-		<td>1</td>
-		<td>2</td>
-	</tr>
-
-</table>
-
+<!--</div>-->
 </body>
+<script>
+function sub() {
+    $.ajax({
+        type: "POST",
+        url: "/user/loginUser",
+        data: $('#sub').serialize(),// 要提交的表单
+        success: function (data) {
+            if(data.respCode=="100200"){
+                window.location.href = "/user/success";
+            }
+            console.log(data);
+        }
+    });
+}
+</script>
 </html>
