@@ -15,7 +15,7 @@ public class BaoMiTest {
     public void generateCode() {
         String packageName = "com.gr.bk";
         boolean serviceNameStartWithI = false;//user -> UserService, 设置成true: user -> IUserService
-        generateByTables(serviceNameStartWithI, packageName, "role_copy");
+        generateByTables(serviceNameStartWithI, packageName, "rc_area_addr");
     }
 
     private void generateByTables(boolean serviceNameStartWithI, String packageName, String... tableNames) {

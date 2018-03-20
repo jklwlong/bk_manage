@@ -10,7 +10,7 @@ buildscript {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
 	}
 }
-//apply plugin: 'war'
+apply plugin: 'war'
 apply plugin: 'org.springframework.boot'
 
 group = 'bk_manage'

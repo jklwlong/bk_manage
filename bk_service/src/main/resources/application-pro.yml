@@ -3,9 +3,9 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/bootdo?characterEncoding=UTF-8&autoReconnect=true&failOverReadOnly=false&useSSL=true
+    url: jdbc:mysql://mysql5.7:3306/bootdo?characterEncoding=UTF-8&autoReconnect=true&failOverReadOnly=false
     username: root
-    password:
+    password: 123456
     initialSize: 5
     minIdle: 5
     maxActive: 20
