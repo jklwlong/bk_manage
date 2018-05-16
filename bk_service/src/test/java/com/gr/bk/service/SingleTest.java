@@ -5,8 +5,11 @@ public class SingleTest {
     public static void main(String[] args) throws InterruptedException {
         B thread = new B();
         thread.start();
-        Thread.sleep(1000);
-        thread.setRunning(false);
+        System.out.println("1");
+        thread.wait();
+        System.out.println("2");
+//        Thread.sleep(1000);
+//        thread.setRunning(false);
 
     }
 }

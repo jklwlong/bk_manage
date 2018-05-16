@@ -12,8 +12,9 @@ import org.springframework.stereotype.Component;
 public class MqListen {
     @RabbitListener(bindings = @QueueBinding(
             value = @Queue(value = MqNameConstants.TEST_QUE_1,autoDelete = "false", durable = "true", exclusive = "false") ,
-            exchange = @Exchange(value = MqNameConstants.TEST_QUE_1, autoDelete = "false", durable = "true", type = "direct") ,
+            exchange = @Exchange(value = MqNameConstants.TEST_QUE_1, autoDelete = "false", durable = "false", type = "direct") ,
             key = MqNameConstants.TEST_QUE_1) )
+//@RabbitListener(queues = "TEST_QUE_1")
     public void accessResult(Message message) {
         try {
             String s = new String(message.getBody(),"UTF-8");

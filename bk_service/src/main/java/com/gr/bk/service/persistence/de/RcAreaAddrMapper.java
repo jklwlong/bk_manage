@@ -2,6 +2,9 @@ package com.gr.bk.service.persistence.de;
 
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.gr.bk.common.domain.RcAreaAddr;
+import com.gr.bk.common.domain.RcAreaCode;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +16,5 @@ import com.gr.bk.common.domain.RcAreaAddr;
  */
 public interface RcAreaAddrMapper extends BaseMapper<RcAreaAddr> {
 
+    List<RcAreaCode> queryAddr();
 }

@@ -4,10 +4,10 @@ import java.io.*;
 
 public class IoTest {
     public static void main(String[] args) throws Exception {
-//        characters();
+        characters();
 //        CopyTextDemo("E:\\1.txt", "E:\\2.txt");
 //        bWriter();
-        copyMedia();
+//        copyMedia();
 //        InOutDemo();
     }
 

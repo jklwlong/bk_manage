@@ -13,4 +13,5 @@ import com.gr.bk.common.domain.RcAreaAddr;
  */
 public interface RcAreaAddrService extends IService<RcAreaAddr> {
 
+    void writeCode();
 }

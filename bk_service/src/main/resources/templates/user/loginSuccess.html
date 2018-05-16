@@ -5,18 +5,25 @@
 </head>
 <body>
 <table>
-	<tr>
-success
-		<td>1</td>
-		<td>2</td>
-	</tr>
-	<tr>
+    <tr>
+        success
+        <td>1</td>
+        <td>2</td>
+    </tr>
+    <tr>
 
-		<td>1</td>
-		<td>2</td>
-	</tr>
+        <td>1</td>
+        <td>2</td>
+    </tr>
 
 </table>
+<form action="/upload/file" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <button type="submit">submit</button>
+</form>
 
+<form action="/rcAreaAddr/write" method="POST">
+    <button type="submit">write</button>
+</form>
 </body>
 </html>

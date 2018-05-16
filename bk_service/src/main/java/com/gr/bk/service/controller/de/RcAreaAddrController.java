@@ -68,5 +68,14 @@ public class RcAreaAddrController extends BaseController{
         rcAreaAddrService.insertBatch(rclist);
         return success();
     }
+
+
+    @RequestMapping("/write")
+    @ResponseBody
+    public MessageResp write() {
+        rcAreaAddrService.writeCode();
+        return success();
+    }
+
 }
 

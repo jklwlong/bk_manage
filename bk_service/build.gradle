@@ -10,7 +10,7 @@ buildscript {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
 	}
 }
-apply plugin: 'jar'
+//apply plugin: 'jar'
 apply plugin: 'org.springframework.boot'
 
 group = 'bk_manage'
@@ -47,6 +47,7 @@ dependencies {
 	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.6'
 	compile group: 'org.apache.shiro', name: 'shiro-spring', version: '1.3.2'
 	compile group: 'net.sourceforge.nekohtml', name: 'nekohtml', version: '1.9.22'
+	compile group: 'org.apache.poi', name: 'poi-ooxml', version: '3.9'
 
 
 	testCompile('org.springframework.boot:spring-boot-starter-test')

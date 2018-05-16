@@ -1,10 +1,15 @@
 package com.gr.bk.service;
 
+import com.gr.bk.common.utils.StringTools;
+
 import java.text.ParseException;
 
 public class Test {
     public static void main(String[] args) throws ParseException {
-        sbli(10);
+        System.out.println(StringTools.getUuid());
+        System.out.println(StringTools.getUuid());
+        System.out.println(StringTools.getUuid());
+        System.out.println(StringTools.getUuid());
     }
 
     private static void sbli(int n) {

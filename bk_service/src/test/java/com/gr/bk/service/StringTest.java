@@ -1,15 +1,9 @@
 package com.gr.bk.service;
 
-import org.apache.commons.collections.map.LinkedMap;
-
-import java.util.LinkedHashMap;
-import java.util.Map;
-
 public class StringTest {
     public static void main(String[] args) {
         StringBuilder builder = new StringBuilder();
         StringBuffer buffer = new StringBuffer();
-
         for (int i = 0; i < 10; i++) {
             new A(builder, buffer).start();
         }
