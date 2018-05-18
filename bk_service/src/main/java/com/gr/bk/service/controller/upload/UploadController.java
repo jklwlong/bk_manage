@@ -32,4 +32,11 @@ public class UploadController extends BaseController{
         uploadService.upload(file);
         return success();
     }
+
+    @RequestMapping("/down")
+    @ResponseBody
+    public MessageResp down(long nPos, String savePathAndFile) {
+        uploadService.down(nPos,savePathAndFile);
+        return success();
+    }
 }
